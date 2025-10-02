@@ -1,0 +1,72 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(120deg, #f0f4f8 0%, #c9e7fa 100%);
+    color: #222;
+}
+header {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+}
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #2196f3;
+}
+.nav-links {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+    margin: 0;
+}
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.nav-links a:hover {
+    color: #2196f3;
+}
+.hero {
+    text-align: center;
+    padding: 5rem 2rem 3rem 2rem;
+    background: #e3f2fd;
+    border-radius: 0 0 32px 32px;
+    box-shadow: 0 4px 24px rgba(33,150,243,0.08);
+}
+.hero h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+.hero button {
+    background: #2196f3;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 24px;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 0 2px 8px rgba(33,150,243,0.15);
+    transition: background 0.2s;
+}
+.hero button:hover {
+    background: #1769aa;
+}
+footer {
+    text-align: center;
+    padding: 2rem 0 1rem 0;
+    font-size: 0.95rem;
+    color: #888;
+    background: transparent;
+}
