@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <title>Optimizador de corte</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    html,body { height: 100%; margin: 0; }
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; }
+    .wrap { height: 100dvh; height: 100vh; }
+    iframe { width: 100%; height: 100%; border: 0; display: block; }
+    /* Loader simple mientras carga el iframe */
+    .loader {
+      position: fixed; inset: 0; display:flex; align-items:center; justify-content:center;
+      background: #fff; transition: opacity .25s ease;
+    }
+    .loader.hidden { opacity: 0; pointer-events: none; }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <!-- MODO EMBED: sin barra de Hugging Face -->
+    <iframe
+      id="app"
+      src="https://hf.space/embed/pblo9856/optimizador-corte-barras/+?__theme=light"
+      allow="clipboard-write; fullscreen; cross-origin-isolated">
+    </iframe>
+    <div id="ldr" class="loader">
+      <div>Cargando aplicación…</div>
+    </div>
+  </div>
+
+  <noscript>
+    Necesitas JavaScript para ver la aplicación. Si no carga, ábrela en
+    <a href="https://huggingface.co/spaces/pblo9856/optimizador-corte-barras" target="_blank" rel="noopener">
+      esta URL
+    </a>.
+  </noscript>
+
+  <script>
+    // Oculta el loader cuando el iframe haya cargado
+    const iframe = document.getElementById('app');
+    const loader = document.getElementById('ldr');
+    iframe.addEventListener('load', () => loader.classList.add('hidden'));
+    // Fallback si tarda mucho (10s)
+    setTimeout(() => loader.classList.add('hidden'), 10000);
+  </script>
+</body>
+</html>
